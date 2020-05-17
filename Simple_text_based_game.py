@@ -1,21 +1,49 @@
 import random
 import time
 
-list_of_items = [] 
+list_of_items = []
+list_char = []
+list_first_male_names = ["Liam", "Noah", "William", "James", "Oliver", "Benjajamin", "Elijah", "Lucas"]
+list_first_female_names = ["Emma", "Olivia", "Ava", "Isabella", "Sophia", "Charlotte", "Mia", "Amelia"]
+list_last_name = ["Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson"]
 
 def intro():
     _age = random.randint(21, 24)
     _drinks = random.randint(2, 5)
     _hour = random.randint(1, 12)
     _minutes = random.randint(10, 59)
+    _char = random.randint(1,2)
+    if(_char == 1):
+        list_char.append("male")
+        list_char.append(random.choice(list_first_male_names))
+    else:
+        list_char.append("female")
+        list_char.append(random.choice(list_first_female_names))
+    time.sleep(2)
+    print("You slowly open you eyes, you do not remember anything from the last night.")
+    time.sleep(2)
+    print("You can barely think straight, you do not even remember how you go there.")
     time.sleep(1)
-    print("For your " + str(_age) + " birthday, your family and friends buy a ticket for a party cruise for the weekend.")
+    print("You get out of bed and you drop your ID. You pick up your ID and take a look at it.")
+    time.sleep(3)
+    print("Your ID says you are a " + list_char[0] + " and your name is " + list_char[1], random.choice(list_last_name)+ "." )
+    time.sleep(2)
+    print("For your age it says you are " + str(_age) + ", and its your birthday, you can vaguely remember that some of your family and friends bought you a ticket for a party cruise for the weekend of your birthday.")
+    time.sleep(1)
+    print("But you cannot think of who it was, but you are here to party. So you shrug it off and go out to party.")
+    time.sleep(1)
     print("The first day of the cruise was amazing, you had the best time of your life.")
+    time.sleep(3)
     print("The best part of the cruise is having time to spend time with your family and friends.")
+    time.sleep(2)
     print("You have " + str(_drinks) + " drinks. Everything goes blink.")
+    time.sleep(1)
     print("You wake up at " + str(_hour) + ":" + str(_minutes) + " a.m. the next moring to a rocking ship.")
+    time.sleep(3)
     print("You look out the window, and there is a huge storm heading the ships way.")
+    time.sleep(2)
     print("You think its weird that none of your family and friends are there with you. But you shrug it off.")
+    time.sleep(1)
     print("You are a bit hungey, so you look at the menu and there is a few places you can go eat on the ship.")
     print(" ")
     menu()
